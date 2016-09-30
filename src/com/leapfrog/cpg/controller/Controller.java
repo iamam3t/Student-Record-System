@@ -8,7 +8,6 @@ package com.leapfrog.cpg.controller;
 import com.leapfrog.cps.DAO.StudentDAO;
 import com.leapfrog.cps.util.Student;
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -53,8 +52,13 @@ public class Controller {
                 std.setContact(tokens[4]);
                 std.setStatus(Boolean.getBoolean(tokens[5]));
                 stdDAO.insert(std);
+                
             }
+            stdDAO.getAll().forEach(s -> {
+                System.out.println(s.getId()+s.getfName());
+            });
             reader.close();
+            
             
         }catch(IOException ie){
             

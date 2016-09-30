@@ -126,7 +126,6 @@ public class StudentDetailsUI extends javax.swing.JFrame {
 
         @Override
         public int getRowCount() {
-            
             return studentList.size();
         }
 
@@ -154,6 +153,8 @@ public class StudentDetailsUI extends javax.swing.JFrame {
             }
             return null;
         }
+        public String getColumnName(int columnIndex){ 
+            return columns[columnIndex];  }
 
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
